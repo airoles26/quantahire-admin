@@ -12,8 +12,8 @@ import ProtectedAdminRoute from "./components/ProtectedAdminRoute";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
-// import Jobs from "./pages/Jobs";
-// import Companies from "./pages/Companies";
+import Jobs from "./pages/Jobs";
+import Companies from "./pages/Companies";
 // import Applications from "./pages/Applications";
 // import Payments from "./pages/Payments";
 // import Subscriptions from "./pages/Subscriptions";
@@ -55,7 +55,7 @@ export default function App() {
               element={<Users />}
             />
 
-            {/* <Route
+            <Route
               path="/jobs"
               element={<Jobs />}
             />
@@ -65,7 +65,7 @@ export default function App() {
               element={<Companies />}
             />
 
-            <Route
+            {/* <Route
               path="/applications"
               element={<Applications />}
             />

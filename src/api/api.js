@@ -62,4 +62,57 @@ export const adminUsersApi = {
 };
 
 
+
+export const adminJobsApi = {
+  getJobs: (params = {}) =>
+    api.get("/admin/jobs/", { params }),
+
+  getStats: () =>
+    api.get("/admin/jobs/stats/"),
+
+  getJob: (id) =>
+    api.get(`/admin/jobs/${id}/`),
+
+  updateJob: (id, data) =>
+    api.patch(`/admin/jobs/${id}/update/`, data),
+
+  updateStatus: (id, is_active) =>
+    api.patch(`/admin/jobs/${id}/update/`, {
+      is_active,
+    }),
+
+  deleteJob: (id) =>
+    api.delete(`/admin/jobs/${id}/delete/`),
+};
+
+
+
+
+export const adminCompaniesApi = {
+  getCompanies: (params = {}) =>
+    api.get("/admin/companies/", { params }),
+
+  getStats: () =>
+    api.get("/admin/companies/stats/"),
+
+  getCompany: (id) =>
+    api.get(`/admin/companies/${id}/`),
+
+  updateCompany: (id, data) =>
+    api.patch(`/admin/companies/${id}/update/`, data),
+
+  updateStatus: (id, is_active) =>
+    api.patch(`/admin/companies/${id}/update/`, {
+      is_active,
+    }),
+
+  updateVerification: (id, is_verified) =>
+    api.patch(`/admin/companies/${id}/update/`, {
+      is_verified,
+    }),
+};
+
+
+
+
 export default api;
