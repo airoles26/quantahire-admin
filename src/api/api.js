@@ -3,7 +3,7 @@ import axios from "axios";
 
 const BASE_URL = (
   import.meta.env.API_URL ||
-  "http://127.0.0.1:8000/api/v1"
+  "https://ai-roles-backend.onrender.com/api/v1"
 ).replace(/\/+$/, "");
 
 const api = axios.create({
